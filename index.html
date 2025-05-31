@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1440, initial-scale=1.0">
-  <title>Bentolio | Portfolio Design Template</title>
+  <title>Yurim Choi | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,148 +13,91 @@
       padding: 0;
     }
     .container {
-      width: 1440px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-    .main-grid {
-      display: grid;
-      grid-template-columns: 1fr 330px 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 32px 40px;
-      margin-top: 40px;
-      min-height: 800px;
-    }
-    .left-col, .center-col, .right-col {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      height: 100%;
-      justify-content: stretch;
-    }
-    .left-col {
-      grid-row: 1 / span 2;
-      grid-column: 1;
-      justify-content: stretch;
-    }
-    .center-col {
-      grid-row: 1 / span 2;
-      grid-column: 2;
-      align-items: center;
-      justify-content: stretch;
-    }
-    .right-col {
-      grid-row: 1 / span 2;
-      grid-column: 3;
-      justify-content: stretch;
-    }
-    .slogan-section, .about-section, .portrait-section, .contact-section, .work-section, .socials-section {
-      margin: 0;
-      padding: 48px 24px 24px 24px;
-      border-radius: 20px;
-      background: #FADCD9;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      box-sizing: border-box;
-    }
-    .contact-section {
-      background: #F8AFA6;
-      margin-top: 32px;
-    }
-    .portrait-section {
-      background: #fff;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      min-height: 476px;
-    }
-    .portrait {
-      width: 330px;
-      height: 476px;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .portrait img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .main-content {
-      flex: 1;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 32px 0 32px 0;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      align-items: center;
+      gap: 40px;
     }
     .header {
+      width: 100%;
       background: #FADCD9;
       border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 0;
+      padding: 24px 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
+      justify-content: center;
       font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       color: #000;
       letter-spacing: 0.05em;
     }
-    .nav-links {
+    .portrait-block {
+      width: 330px;
+      height: 476px;
+      background: #fff;
+      border-radius: 20px;
+      margin: 0 auto;
       display: flex;
-      gap: 88px;
-      font-size: 16px;
-      font-weight: 300;
-      color: #000;
-      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
     }
-    .slogan {
-      font-size: 56px;
+    .slogan-block {
+      width: 100%;
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 48px 24px 32px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
       font-weight: 700;
       color: #000;
-      margin-bottom: 0;
-      line-height: 1em;
+      text-align: center;
+      line-height: 1.2em;
     }
-    .about-text {
+    .about-block {
+      width: 100%;
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 32px 24px;
       font-size: 20px;
       font-weight: 300;
       color: #000;
-      margin-bottom: 0;
-      line-height: 1.25em;
+      text-align: center;
+      line-height: 1.5em;
     }
-    .work-list {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      justify-content: space-between;
-      height: 100%;
-    }
-    .work-item {
-      font-size: 25px;
-      font-weight: 500;
-      color: #000;
-      background: #fff;
-      border-radius: 16px 16px 0 0;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      border-bottom: 2px solid #F8AFA6;
-    }
-    .work-item:last-child {
-      border-bottom: none;
-      border-radius: 0 0 16px 16px;
-    }
-    .socials-section {
+    .works-block {
+      width: 100%;
       background: #FADCD9;
       border-radius: 20px;
-      padding: 24px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+    .work-item {
+      width: 100%;
+      max-width: 350px;
+      background: #fff;
+      border-radius: 16px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #000;
+      padding: 18px 0;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .socials-block {
+      width: 100%;
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 32px 24px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -165,82 +108,64 @@
       text-transform: uppercase;
       color: #000;
     }
+    .socials-block a {
+      color: inherit;
+      text-decoration: none;
+      font: inherit;
+    }
+    .contact-block {
+      width: 100%;
+      background: #F8AFA6;
+      border-radius: 20px;
+      padding: 48px 24px 48px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
     .contact-title {
-      font-size: 55px;
+      font-size: 36px;
       font-weight: 500;
       color: #000;
-      margin-top: 120px;
-      margin-bottom: 64px;
-      text-align: left;
-    }
-    .contact-bar {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
-      margin-bottom: 0;
-      gap: 16px;
+      margin-bottom: 24px;
+      text-align: center;
     }
     .contact-question {
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 300;
       color: #000;
-      line-height: 1.15em;
+      text-align: center;
+      line-height: 1.3em;
     }
-    @media (max-width: 1440px) {
-      .container {
-        width: 100vw;
-        padding: 8px;
-      }
+    @media (max-width: 700px) {
+      .container { max-width: 98vw; padding: 8px 0; }
+      .portrait-block { width: 95vw; max-width: 330px; }
+      .slogan-block, .about-block, .works-block, .socials-block, .contact-block { padding: 18px 4vw; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <span class="logo">YURIM CHOI</span>
-      <div class="nav-links">
-        <span>PROJECTS</span>
-        <span>ABOUT</span>
-        <span>CONTACT</span>
-      </div>
+    <div class="header">YURIM CHOI</div>
+    <div class="portrait-block"></div>
+    <div class="slogan-block">Purpose in every day.<br>Meaning in every move.</div>
+    <div class="about-block">
+      Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
     </div>
-    <div class="main-grid">
-      <div class="left-col">
-        <div class="slogan-section section">
-          <div class="slogan">Purpose in every day.<br>Meaning in every move.</div>
-        </div>
-        <div class="about-section section">
-          <div class="about-text">
-            Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
-          </div>
-        </div>
-      </div>
-      <div class="center-col">
-        <div class="portrait-section section">
-          <div class="portrait"></div>
-        </div>
-        <div class="contact-section section">
-          <div class="contact-title">Contact me</div>
-          <div class="contact-bar">
-            <span class="contact-question">Have some<br>questions?</span>
-          </div>
-        </div>
-      </div>
-      <div class="right-col">
-        <div class="work-section section">
-          <div class="work-list">
-            <div class="work-item">Data Engineering</div>
-            <div class="work-item">LLM</div>
-            <div class="work-item">Data Visualization</div>
-            <div class="work-item">Web Development</div>
-          </div>
-        </div>
-        <div class="socials-section section">
-          <a href="https://github.com/Yurim51" target="_blank" style="color:inherit;text-decoration:none;font:inherit;">GITHUB</a>
-          <span>LINKEDIN</span>
-          <span>BLOG</span>
-        </div>
-      </div>
+    <div class="works-block">
+      <div class="work-item">Data Engineering</div>
+      <div class="work-item">LLM</div>
+      <div class="work-item">Data Visualization</div>
+      <div class="work-item">Web Development</div>
+    </div>
+    <div class="socials-block">
+      <a href="https://github.com/Yurim51" target="_blank">GITHUB</a>
+      <span>LINKEDIN</span>
+      <span>BLOG</span>
+    </div>
+    <div class="contact-block">
+      <div class="contact-title">Contact me</div>
+      <div class="contact-question">Have some<br>questions?</div>
     </div>
   </div>
 </body>
