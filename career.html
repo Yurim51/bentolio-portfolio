@@ -22,12 +22,42 @@
       flex-direction: column;
       align-items: center;
     }
+    .header {
+      width: 100%;
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-size: 25px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #000;
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 48px;
+      font-size: 16px;
+      font-weight: 300;
+      color: #000;
+      text-transform: uppercase;
+    }
+    .nav-links a {
+      color: inherit;
+      text-decoration: none;
+      font: inherit;
+    }
     .career-block {
       width: 100%;
       background: #FADCD9;
       border-radius: 20px;
       padding: 48px 32px;
-      margin-top: 60px;
       font-size: 20px;
       font-weight: 300;
       color: #000;
@@ -71,6 +101,15 @@
 </head>
 <body>
   <div class="container">
+    <div class="header">
+      <span class="logo">YURIM CHOI</span>
+      <div class="nav-links">
+        <a href="index.html">PROJECTS</a>
+        <a href="index.html">ABOUT</a>
+        <a href="career.html">CAREER</a>
+        <a href="index.html">CONTACT</a>
+      </div>
+    </div>
     <div class="career-block">
       <div class="career-title">👩‍🎓 학력</div>
       <ul class="career-list">
