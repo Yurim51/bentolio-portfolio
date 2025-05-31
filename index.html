@@ -16,9 +16,30 @@
       width: 1440px;
       margin: 0 auto;
       padding: 24px;
+    }
+    .main-sections {
       display: flex;
       flex-direction: row;
       gap: 40px;
+      margin-top: 24px;
+    }
+    .left-col, .center-col, .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .left-col {
+      flex: 1 1 0;
+      max-width: 448px;
+    }
+    .center-col {
+      flex: 0 0 330px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .right-col {
+      flex: 1 1 0;
+      max-width: 448px;
     }
     .main-content {
       flex: 1;
@@ -199,42 +220,45 @@
         <span>CONTACT</span>
       </div>
     </div>
-
-    <div class="section">
-      <div class="slogan">Artist Redefining Architecture with AI-Driven Design</div>
-    </div>
-
-    <div class="section">
-      <div class="about-text">
-        Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+    <div class="main-sections">
+      <div class="left-col">
+        <div class="section about-section">
+          <div class="about-text">
+            Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+          </div>
+        </div>
+        <div class="section work-section">
+          <div class="work-list">
+            <div class="work-item">Musea</div>
+            <div class="work-item">Elara</div>
+            <div class="work-item">Verve</div>
+            <div class="work-item">Zephyr</div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="work-list">
-        <div class="work-item">Musea</div>
-        <div class="work-item">Elara</div>
-        <div class="work-item">Verve</div>
-        <div class="work-item">Zephyr</div>
+      <div class="center-col">
+        <div class="portrait-section">
+          <div class="portrait">
+            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=476&q=80" alt="Portrait" />
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="section socials">
-      <span>Instagram</span>
-      <span>Twitter</span>
-      <span>Linkedin</span>
-    </div>
-
-    <div class="section">
-      <div class="contact-title">Contact me</div>
-      <div class="contact-bar">
-        <span class="contact-question">Have some<br>questions?</span>
+      <div class="right-col">
+        <div class="section slogan-section">
+          <div class="slogan">Artist Redefining Architecture with AI-Driven Design</div>
+        </div>
+        <div class="section socials-section">
+          <span>Instagram</span>
+          <span>Twitter</span>
+          <span>Linkedin</span>
+        </div>
+        <div class="section contact-section">
+          <div class="contact-title">Contact me</div>
+          <div class="contact-bar">
+            <span class="contact-question">Have some<br>questions?</span>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="portrait">
-      <!-- Example portrait image, replace with actual if available -->
-      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=476&q=80" alt="Portrait" />
     </div>
   </div>
 </body>
