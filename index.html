@@ -16,12 +16,21 @@
       width: 1440px;
       margin: 0 auto;
       padding: 24px;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
     .header {
       background: #FADCD9;
       border-radius: 20px;
       padding: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -31,6 +40,7 @@
       font-weight: 300;
       text-transform: uppercase;
       color: #000;
+      letter-spacing: 0.05em;
     }
     .nav-links {
       display: flex;
@@ -38,82 +48,144 @@
       font-size: 16px;
       font-weight: 300;
       color: #000;
+      text-transform: uppercase;
     }
     .section {
       background: #FADCD9;
       border-radius: 20px;
-      margin-bottom: 24px;
       padding: 24px;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .slogan-section {
+      background: #FADCD9;
+      border-radius: 20px;
+      margin-bottom: 0;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
     .slogan {
       font-size: 56px;
       font-weight: 700;
       color: #000;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+      line-height: 1em;
+    }
+    .about-section {
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
     .about-text {
       font-size: 20px;
       font-weight: 300;
       color: #000;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+      line-height: 1.25em;
+    }
+    .work-section {
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
     .work-list {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 0;
     }
     .work-item {
       font-size: 25px;
       font-weight: 500;
       color: #000;
       background: #fff;
-      border-radius: 16px;
+      border-radius: 16px 16px 0 0;
       padding: 16px 24px;
-      margin-bottom: 8px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
+      border-bottom: 2px solid #F8AFA6;
     }
-    .socials {
+    .work-item:last-child {
+      border-bottom: none;
+      border-radius: 0 0 16px 16px;
+    }
+    .socials-section {
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 24px;
       display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
       gap: 88px;
       font-size: 15px;
       font-weight: 300;
       text-transform: uppercase;
       color: #000;
-      margin-bottom: 24px;
+    }
+    .contact-section {
+      background: #F8AFA6;
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
     .contact-title {
       font-size: 55px;
       font-weight: 500;
       color: #000;
-      margin-bottom: 16px;
+      margin-bottom: 0;
     }
     .contact-bar {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 16px;
+      margin-bottom: 0;
+      gap: 16px;
     }
     .contact-question {
       font-size: 15px;
       font-weight: 300;
       color: #000;
+      line-height: 1.15em;
+    }
+    .portrait-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
     }
     .portrait {
       background: #fff;
       border-radius: 20px;
       width: 330px;
       height: 476px;
-      margin-bottom: 24px;
       overflow: hidden;
-      display: inline-block;
-      vertical-align: top;
+      display: block;
+      margin-bottom: 0;
     }
     .portrait img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    @media (max-width: 1440px) {
+      .container {
+        width: 100vw;
+        padding: 8px;
+      }
     }
   </style>
 </head>
