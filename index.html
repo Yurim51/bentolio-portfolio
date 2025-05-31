@@ -17,29 +17,72 @@
       margin: 0 auto;
       padding: 24px;
     }
-    .main-sections {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-      margin-top: 24px;
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 330px 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 32px 40px;
+      margin-top: 40px;
+      min-height: 800px;
     }
     .left-col, .center-col, .right-col {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 32px;
+      height: 100%;
+      justify-content: stretch;
     }
     .left-col {
-      flex: 1 1 0;
-      max-width: 448px;
+      grid-row: 1 / span 2;
+      grid-column: 1;
+      justify-content: stretch;
     }
     .center-col {
-      flex: 0 0 330px;
+      grid-row: 1 / span 2;
+      grid-column: 2;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: stretch;
     }
     .right-col {
-      flex: 1 1 0;
-      max-width: 448px;
+      grid-row: 1 / span 2;
+      grid-column: 3;
+      justify-content: stretch;
+    }
+    .slogan-section, .about-section, .portrait-section, .contact-section, .work-section, .socials-section {
+      margin: 0;
+      padding: 24px;
+      border-radius: 20px;
+      background: #FADCD9;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      box-sizing: border-box;
+    }
+    .contact-section {
+      background: #F8AFA6;
+      margin-top: 32px;
+    }
+    .portrait-section {
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      min-height: 476px;
+    }
+    .portrait {
+      width: 330px;
+      height: 476px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .main-content {
       flex: 1;
@@ -71,24 +114,6 @@
       color: #000;
       text-transform: uppercase;
     }
-    .section {
-      background: #FADCD9;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .slogan-section {
-      background: #FADCD9;
-      border-radius: 20px;
-      margin-bottom: 0;
-      padding: 24px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
     .slogan {
       font-size: 56px;
       font-weight: 700;
@@ -96,30 +121,12 @@
       margin-bottom: 0;
       line-height: 1em;
     }
-    .about-section {
-      background: #FADCD9;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 0;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
     .about-text {
       font-size: 20px;
       font-weight: 300;
       color: #000;
       margin-bottom: 0;
       line-height: 1.25em;
-    }
-    .work-section {
-      background: #FADCD9;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
     }
     .work-list {
       display: flex;
@@ -155,14 +162,6 @@
       text-transform: uppercase;
       color: #000;
     }
-    .contact-section {
-      background: #F8AFA6;
-      border-radius: 20px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
     .contact-title {
       font-size: 55px;
       font-weight: 500;
@@ -182,26 +181,6 @@
       color: #000;
       line-height: 1.15em;
     }
-    .portrait-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-    .portrait {
-      background: #fff;
-      border-radius: 20px;
-      width: 330px;
-      height: 476px;
-      overflow: hidden;
-      display: block;
-      margin-bottom: 0;
-    }
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
     @media (max-width: 1440px) {
       .container {
         width: 100vw;
@@ -220,14 +199,32 @@
         <span>CONTACT</span>
       </div>
     </div>
-    <div class="main-sections">
+    <div class="main-grid">
       <div class="left-col">
-        <div class="section about-section">
+        <div class="slogan-section section">
+          <div class="slogan">Artist Redefining Architecture with AI-Driven Design</div>
+        </div>
+        <div class="about-section section">
           <div class="about-text">
             Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
           </div>
         </div>
-        <div class="section work-section">
+      </div>
+      <div class="center-col">
+        <div class="portrait-section section">
+          <div class="portrait">
+            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=476&q=80" alt="Portrait" />
+          </div>
+        </div>
+        <div class="contact-section section">
+          <div class="contact-title">Contact me</div>
+          <div class="contact-bar">
+            <span class="contact-question">Have some<br>questions?</span>
+          </div>
+        </div>
+      </div>
+      <div class="right-col">
+        <div class="work-section section">
           <div class="work-list">
             <div class="work-item">Musea</div>
             <div class="work-item">Elara</div>
@@ -235,28 +232,10 @@
             <div class="work-item">Zephyr</div>
           </div>
         </div>
-      </div>
-      <div class="center-col">
-        <div class="portrait-section">
-          <div class="portrait">
-            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=476&q=80" alt="Portrait" />
-          </div>
-        </div>
-      </div>
-      <div class="right-col">
-        <div class="section slogan-section">
-          <div class="slogan">Artist Redefining Architecture with AI-Driven Design</div>
-        </div>
-        <div class="section socials-section">
+        <div class="socials-section section">
           <a href="https://github.com/Yurim51" target="_blank" style="color:inherit;text-decoration:none;font:inherit;">GITHUB</a>
           <span>LINKEDIN</span>
           <span>BLOG</span>
-        </div>
-        <div class="section contact-section">
-          <div class="contact-title">Contact me</div>
-          <div class="contact-bar">
-            <span class="contact-question">Have some<br>questions?</span>
-          </div>
         </div>
       </div>
     </div>
