@@ -26,25 +26,59 @@
       width: 100%;
       background: #FADCD9;
       border-radius: 20px;
-      padding: 24px 0;
+      padding: 24px 32px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+    .logo {
       font-size: 25px;
       font-weight: 300;
       text-transform: uppercase;
       color: #000;
       letter-spacing: 0.05em;
     }
+    .nav-links {
+      display: flex;
+      gap: 48px;
+      font-size: 16px;
+      font-weight: 300;
+      color: #000;
+      text-transform: uppercase;
+    }
+    .main-block {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .about-block {
+      flex: 1 1 0;
+      background: #FADCD9;
+      border-radius: 20px;
+      padding: 32px 24px;
+      font-size: 20px;
+      font-weight: 300;
+      color: #000;
+      text-align: left;
+      line-height: 1.5em;
+      display: flex;
+      align-items: center;
+      min-height: 200px;
+    }
     .portrait-block {
-      width: 330px;
-      height: 476px;
+      width: 200px;
+      min-width: 160px;
+      height: 200px;
       background: #fff;
       border-radius: 20px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-left: 0;
     }
     .slogan-block {
       width: 100%;
@@ -59,17 +93,6 @@
       color: #000;
       text-align: center;
       line-height: 1.2em;
-    }
-    .about-block {
-      width: 100%;
-      background: #FADCD9;
-      border-radius: 20px;
-      padding: 32px 24px;
-      font-size: 20px;
-      font-weight: 300;
-      color: #000;
-      text-align: center;
-      line-height: 1.5em;
     }
     .works-block {
       width: 100%;
@@ -123,35 +146,50 @@
       align-items: center;
       gap: 40px;
     }
-    .contact-title {
-      font-size: 36px;
-      font-weight: 500;
-      color: #000;
-      margin-bottom: 24px;
-      text-align: center;
-    }
     .contact-question {
       font-size: 17px;
       font-weight: 300;
       color: #000;
       text-align: center;
       line-height: 1.3em;
+      margin-bottom: 40px;
+    }
+    .contact-title {
+      font-size: 36px;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .main-block { flex-direction: column; gap: 16px; }
+      .portrait-block { width: 100%; height: 160px; min-width: 0; }
     }
     @media (max-width: 700px) {
       .container { max-width: 98vw; padding: 8px 0; }
-      .portrait-block { width: 95vw; max-width: 330px; }
-      .slogan-block, .about-block, .works-block, .socials-block, .contact-block { padding: 18px 4vw; }
+      .header { padding: 16px 8px; font-size: 20px; }
+      .main-block { gap: 8px; }
+      .about-block, .works-block, .socials-block, .contact-block { padding: 18px 4vw; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">YURIM CHOI</div>
-    <div class="portrait-block"></div>
-    <div class="slogan-block">Purpose in every day.<br>Meaning in every move.</div>
-    <div class="about-block">
-      Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+    <div class="header">
+      <span class="logo">YURIM CHOI</span>
+      <div class="nav-links">
+        <span>PROJECTS</span>
+        <span>ABOUT</span>
+        <span>CONTACT</span>
+      </div>
     </div>
+    <div class="main-block">
+      <div class="about-block">
+        Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+      </div>
+      <div class="portrait-block"></div>
+    </div>
+    <div class="slogan-block">Purpose in every day.<br>Meaning in every move.</div>
     <div class="works-block">
       <div class="work-item">Data Engineering</div>
       <div class="work-item">LLM</div>
@@ -164,8 +202,8 @@
       <span>BLOG</span>
     </div>
     <div class="contact-block">
-      <div class="contact-title">Contact me</div>
       <div class="contact-question">Have some<br>questions?</div>
+      <div class="contact-title">Contact me</div>
     </div>
   </div>
 </body>
